@@ -1,0 +1,41 @@
+# ---------- Data (too large for git) ----------
+data/train/cats/
+data/train/dogs/
+data/validation/cats/
+data/validation/dogs/
+data/test/cats/
+data/test/dogs/
+kagglecatsanddogs_5340.zip
+PetImages/
+notebook/data/
+notebook/*.zip
+
+# ---------- Model artefacts ----------
+models/*.keras
+models/*.h5
+models/*.pkl
+models/training_history.json
+!models/.gitkeep
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+venv/
+env/
+.env
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
