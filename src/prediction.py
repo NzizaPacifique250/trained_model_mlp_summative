@@ -25,6 +25,7 @@ from PIL import Image
 import io
 
 from src.preprocessing import IMAGE_SIZE
+from src.model import build_model
 
 IMAGENET_SIZE = (224, 224)
 
@@ -34,23 +35,29 @@ CAT_INDICES = set(range(281, 286))
 CAT_DOG_INDICES = DOG_INDICES | CAT_INDICES
 MIN_CAT_DOG_PROB = 0.05
 
+WEIGHTS_PATH = "models/model_weights.weights.h5"
+
 
 class Predictor:
-    def __init__(self, model_path="models/model.h5"):
-        self.model_path = model_path
+    def __init__(self, weights_path=WEIGHTS_PATH):
+        self.weights_path = weights_path
         self.imagenet_model = None
         self.custom_model = None
         self.load()
 
     def load(self):
-        """Load both the ImageNet pre-filter and the custom fine-tuned model."""
+        """Load ImageNet pre-filter and rebuild custom model from architecture + weights."""
         if self.imagenet_model is None:
             self.imagenet_model = MobileNetV2(weights="imagenet")
 
-        if os.path.exists(self.model_path):
-            self.custom_model = load_model(self.model_path, compile=False)
+        if os.path.exists(self.weights_path):
+            # Rebuild the architecture from source code (version-agnostic)
+            self.custom_model = build_model()
+            # Load only weights - no config deserialization needed
+            self.custom_model.load_weights(self.weights_path)
+            print(f"Custom model loaded from weights: {self.weights_path}")
         else:
-            print(f"Warning: Custom model not found at {self.model_path}")
+            print(f"Warning: Weights not found at {self.weights_path}")
 
     def _preprocess_imagenet(self, image_bytes: bytes) -> np.ndarray:
         img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
