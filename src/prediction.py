@@ -36,7 +36,7 @@ MIN_CAT_DOG_PROB = 0.05
 
 
 class Predictor:
-    def __init__(self, model_path="models/model.keras"):
+    def __init__(self, model_path="models/model.h5"):
         self.model_path = model_path
         self.imagenet_model = None
         self.custom_model = None
@@ -48,7 +48,7 @@ class Predictor:
             self.imagenet_model = MobileNetV2(weights="imagenet")
 
         if os.path.exists(self.model_path):
-            self.custom_model = load_model(self.model_path)
+            self.custom_model = load_model(self.model_path, compile=False)
         else:
             print(f"Warning: Custom model not found at {self.model_path}")
 
