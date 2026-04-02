@@ -11,10 +11,10 @@ notebook/data/
 notebook/*.zip
 
 # ---------- Model artefacts ----------
-models/*.keras
-models/*.h5
-models/*.pkl
-models/training_history.json
+# models/*.keras
+# models/*.h5
+# models/*.pkl
+# models/training_history.json
 !models/.gitkeep
 
 # ---------- Python ----------
