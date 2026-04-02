@@ -1,0 +1,27 @@
+# Render Blueprint – deploy API + UI as Docker services
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  # ── FastAPI backend ──
+  - type: web
+    name: ml-pipeline-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.api
+    plan: free
+    envVars:
+      - key: PYTHONPATH
+        value: /app
+    disk:
+      name: ml-models
+      mountPath: /app/models
+      sizeGB: 1
+
+  # ── Streamlit frontend ──
+  - type: web
+    name: ml-pipeline-ui
+    runtime: docker
+    dockerfilePath: ./Dockerfile.ui
+    plan: free
+    envVars:
+      - key: API_URL
+        value: https://ml-pipeline-api.onrender.com
