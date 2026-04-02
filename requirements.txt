@@ -1,0 +1,12 @@
+tensorflow
+Pillow
+numpy
+fastapi
+uvicorn
+python-multipart
+streamlit
+requests
+locust
+scikit-learn
+seaborn
+matplotlib
