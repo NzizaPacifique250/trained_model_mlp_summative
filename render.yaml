@@ -16,6 +16,7 @@ services:
   - type: web
     name: model-prediction-ml-pipeliene
     runtime: docker
+    dockerContext: ./frontend
     dockerfilePath: ./frontend/Dockerfile
     plan: free
     envVars:
