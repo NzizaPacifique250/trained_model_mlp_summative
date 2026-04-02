@@ -18,10 +18,10 @@ Built with **MobileNetV2** transfer learning and fine-tuning, served via a **Fas
 
 | Resource | Link |
 |----------|------|
-| **Video Demo** | *[YouTube link — to be added after recording]* |
-| **Deployed API** | *[URL — to be added after deployment]* |
-| **Deployed UI** | *[URL — to be added after deployment]* |
-| **GitHub Repository** | *[Repository URL]* |
+| **Video Demo** | *https://drive.google.com/file/d/1DBre6HwDBJHMtb2-P7pBei0OfowCm6o-/view?usp=drive_link* |
+| **Deployed API** | *https://model-prediction-ml-pipeliene-api.onrender.com* |
+| **Deployed UI** | *https://model-prediction-ml-pipeliene.onrender.com* |
+| **GitHub Repository** | *https://github.com/NzizaPacifique250/trained_model_mlp_summative* |
 
 ---
 
@@ -611,6 +611,8 @@ The video demonstration covers:
 | **Matplotlib / Seaborn** | Notebook visualizations |
 | **Pillow** | Image processing |
 | **nginx** | Reverse proxy for frontend |
-#   m o d e l _ p r e d i c t i o n _ m l _ p i p e l i e n e  
- #   t r a i n e d _ m o d e l _ m l p _ s u m m a t i v e  
+#   m o d e l _ p r e d i c t i o n _ m l _ p i p e l i e n e 
+ 
+ #   t r a i n e d _ m o d e l _ m l p _ s u m m a t i v e 
+ 
  
