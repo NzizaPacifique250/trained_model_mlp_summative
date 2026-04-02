@@ -11,10 +11,6 @@ services:
     envVars:
       - key: PYTHONPATH
         value: /app
-    disk:
-      name: ml-models
-      mountPath: /app/models
-      sizeGB: 1
 
   # ── React frontend ──
   - type: web
