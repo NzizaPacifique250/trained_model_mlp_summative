@@ -492,7 +492,7 @@ Interactive API documentation available at: `http://localhost:8000/docs`
 │  (User)    │                     │   Port: 3000        │
 └────────────┘                     └─────────┬──────────┘
                                              │
-                                             │ /api proxy (nginx)
+                                             │ Direct CORS traffic
                                              ▼
                                    ┌────────────────────┐
                                    │   FastAPI Backend   │
@@ -508,9 +508,10 @@ Interactive API documentation available at: `http://localhost:8000/docs`
 2. Go to [Render Dashboard](https://dashboard.render.com/) -> **New** -> **Blueprint**
 3. Connect the GitHub repo and select the branch
 4. Render reads `render.yaml` and automatically creates both services:
-   - `ml-pipeline-api` — FastAPI backend with persistent disk for models
-   - `ml-pipeline-ui` — React frontend
-5. After deployment, trigger `/retrain` to train the model on the server
+   - `model-prediction-ml-pipeliene-api` — FastAPI backend
+   - `model-prediction-ml-pipeliene` — React frontend
+5. After deployment, trigger `/retrain` to train the model on the server.
+   **Note:** On Render's Free tier, persistent disks are not supported, so any retrained models will reset when the instance sleeps. For permanent free hosting, generate and commit `model.keras` directly to the repository!
 
 ### Deploy on Any Docker Host
 
