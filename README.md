@@ -1,6 +1,16 @@
-# Image Classification ML Pipeline — Cats vs Dogs
+# 🐾 Image Classification ML Pipeline — Cats vs Dogs
 
-An end-to-end Machine Learning pipeline for image classification using non-tabular (image) data. Built with **MobileNetV2** transfer learning and fine-tuning, served via a **FastAPI** backend, and presented through a **React** web application. The entire stack is containerised with **Docker** for reproducible deployment and tested under load with **Locust**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+</p>
+
+> **An end-to-end Machine Learning pipeline for image classification using non-tabular (image) data.**
+
+Built with **MobileNetV2** transfer learning and fine-tuning, served via a **FastAPI** backend, and presented through a **React** web application. The entire stack is containerised with **Docker** for reproducible deployment and tested under load with **Locust**.
 
 ---
 
@@ -107,6 +117,9 @@ ml-pipeline-summative/
 ## Setup Instructions
 
 ### Prerequisites
+
+> [!NOTE]
+> **Before starting**, please ensure you have the following installed on your machine:
 
 - **Python 3.9+**
 - **Docker & Docker Compose** (for containerised deployment)
