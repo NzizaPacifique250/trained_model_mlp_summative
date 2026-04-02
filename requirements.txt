@@ -1,12 +1,8 @@
-tensorflow
+tensorflow==2.21.0
+keras==3.13.2
 Pillow
 numpy
 fastapi
 uvicorn
 python-multipart
-streamlit
-requests
-locust
 scikit-learn
-seaborn
-matplotlib
