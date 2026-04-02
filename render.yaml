@@ -4,7 +4,7 @@
 services:
   # ── FastAPI backend ──
   - type: web
-    name: ml-pipeline-api
+    name: model-prediction-ml-pipeliene-api
     runtime: docker
     dockerfilePath: ./Dockerfile.api
     plan: free
@@ -16,12 +16,12 @@ services:
       mountPath: /app/models
       sizeGB: 1
 
-  # ── Streamlit frontend ──
+  # ── React frontend ──
   - type: web
-    name: ml-pipeline-ui
+    name: model-prediction-ml-pipeliene
     runtime: docker
-    dockerfilePath: ./Dockerfile.ui
+    dockerfilePath: ./frontend/Dockerfile
     plan: free
     envVars:
       - key: API_URL
-        value: https://ml-pipeline-api.onrender.com
+        value: https://model-prediction-ml-pipeliene-api.onrender.com
