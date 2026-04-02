@@ -20,5 +20,5 @@ services:
     dockerfilePath: ./frontend/Dockerfile
     plan: free
     envVars:
-      - key: API_URL
+      - key: VITE_API_URL
         value: https://model-prediction-ml-pipeliene-api.onrender.com

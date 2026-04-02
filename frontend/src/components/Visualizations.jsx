@@ -5,7 +5,7 @@ import {
   LineChart, Line, ResponsiveContainer,
 } from 'recharts'
 
-const API = '/api'
+const API = import.meta.env.VITE_API_URL ? String(import.meta.env.VITE_API_URL).replace(/\/$/, '') : '/api'
 
 export default function Visualizations() {
   const [stats, setStats] = useState(null)
